@@ -1,0 +1,6 @@
+<!ELEMENT Items (record*)>
+<!ELEMENT record (Item_No, ItemName, Price, qty)>
+<!ELEMENT Item_No (#PCDATA)>
+<!ELEMENT ItemName (#PCDATA)>
+<!ELEMENT Price (#PCDATA)>
+<!ELEMENT qty (#PCDATA)>

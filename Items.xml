@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE Items SYSTEM "Items.dtd">
+
+<Items>
+
+   <record>
+      <Item_No>IT001</Item_No>
+      <ItemName>Bag</ItemName>
+      <Price>$60</Price>
+      <qty>1</qty>
+   </record>
+
+   <record>
+      <Item_No>IT002</Item_No>
+      <ItemName>Shoes</ItemName>
+      <Price>$100</Price>
+      <qty>2</qty>
+   </record>
+
+</Items>

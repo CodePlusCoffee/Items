@@ -1,0 +1,15 @@
+body
+{
+   background-color: violet;
+}
+
+table
+{
+   border: 1px solid black;
+   border-collapse: collapse;
+}
+
+th, td
+{
+   border: 5px solid black;
+}

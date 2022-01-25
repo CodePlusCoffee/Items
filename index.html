@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+   <head>
+      <title>Items Web Page XML</title>
+      <link rel="stylesheet" href="ItemsCss.css">
+      <script src="items.js"></script>
+   </head>
+
+   <body>
+
+      <h1>My First Webpage</h1>
+      <h2>Items</h2>
+      <p>Below are the following items:</p>
+
+      <script>
+         let xmlDoc = ajaxGetXMLDocument("Items.xml");
+
+         let itemsTable = document.createElement("table");
+         let record = xmlDoc.getElementsByTagName("record");
+         let tableRow = "";
+
+         for (index = 0; index<record.length; index++)
+         {
+            if(index===0)
+            {
+               itemsTable.appendChild(write_Column_Heading());
+            }
+
+            tableRow = document.createElement("tr");
+            tableData = document.createElement("td");
+            tableData.appendChild(document.createTextNode(record[index].getElementsByTagName("Item_No")[0].childNodes[0].nodeValue));
+            tableRow.appendChild(tableData);
+
+            tableData = document.createElement("td");
+            tableData.appendChild(document.createTextNode(record[index].getElementsByTagName("ItemName")[0].childNodes[0].nodeValue));
+            tableRow.appendChild(tableData);
+
+            tableData = document.createElement("td");
+            tableData.appendChild(document.createTextNode(record[index].getElementsByTagName("Price")[0].childNodes[0].nodeValue));
+            tableRow.appendChild(tableData);
+
+            tableData = document.createElement("td");
+            tableData.appendChild(document.createTextNode(record[index].getElementsByTagName("qty")[0].childNodes[0].nodeValue));
+            tableRow.appendChild(tableData);
+
+            itemsTable.appendChild(tableRow);
+         }//for (index = 0; index<record.length; index++)
+
+         document.body.appendChild(itemsTable);
+      </script>
+   </body>
+
+</html>
